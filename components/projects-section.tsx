@@ -48,8 +48,7 @@ export function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A showcase of my recent work, demonstrating expertise in full-stack development, modern frameworks, and
-            innovative problem-solving approaches.
+            A collection of my recent work, highlighting skills in web development, and creative problem-solving through real-world applications.
           </p>
         </div>
 

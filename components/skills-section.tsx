@@ -57,15 +57,11 @@ export function SkillsSection() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <span className="text-lg">🛠️</span>
-            My Toolkit
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
             Skills & Technologies
           </h2>
           <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            The skills, tools and technologies I use to bring innovative ideas to life
+            Technologies & Frameworks I’m Currently Exploring
           </p>
         </div>
 

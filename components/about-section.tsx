@@ -9,19 +9,19 @@ export function AboutSection() {
             <h2 className="text-4xl font-bold text-balance">Curious about me? Here you have it:</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate IT student with a strong foundation in computer science and software development. My
-                journey began with curiosity about how technology shapes our world, and it has evolved into a deep
-                commitment to creating meaningful digital experiences.
+                Motivated IT enthusiast with a strong foundation in web development, programming, 
+                and software solutions. Experienced in building responsive and interactive web 
+                applications using modern technologies like React, Node.js, Express, and MongoDB.
               </p>
               <p>
-                Currently pursuing my degree in Information Technology, I specialize in full-stack web development, with
-                expertise in modern frameworks like React, Next.js, and Node.js. I'm particularly interested in the
-                intersection of user experience and technical innovation.
+                Passionate about exploring emerging technologies, solving real-world problems, 
+                and turning innovative ideas into practical projects. Dedicated to creating 
+                user-friendly digital experiences while maintaining clean, efficient, and scalable code.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or
-                mentoring fellow students. I believe in continuous learning and staying updated with the latest industry
-                trends.
+                Skilled in problem-solving, creative thinking, attention to detail, and collaboration,
+                with a strong drive to learn continuously and contribute effectively in team-oriented 
+                environments.
               </p>
             </div>
           </div>
@@ -29,9 +29,9 @@ export function AboutSection() {
           <div className="flex justify-center">
             <Card className="p-6 max-w-sm">
               <img
-                src="/casual-photo-it-student-with-laptop.jpg"
+                src="/coding-image.png"
                 alt="About me"
-                className="w-full h-64 object-cover rounded-lg mb-4"
+                className="w-full h-74 object-cover rounded-lg mb-4"
               />
               <p className="text-sm text-muted-foreground text-center">Always learning, always growing 🚀</p>
             </Card>

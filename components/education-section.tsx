@@ -2,23 +2,31 @@ import { GraduationCap, MapPin, Calendar, Award } from "lucide-react"
 
 const education = [
   {
-    degree: "BSc in Information Technology",
+    degree: "BSc (Hons) in Information Technology & Management",
     school: "University of Moratuwa",
     period: "2023 - Present",
     location: "Katubedda, Sri Lanka",
     description:
-      "3rd Year Undergraduate pursuing Information Technology degree with focus on software development, database management, and emerging technologies.",
-    gpa: "3.54/4.00",
+      "3rd Year Undergraduate specializing in Information Technology & Management with a strong interest in software engineering, web development, and data-driven solutions.",
+    gpa: "3.30/4.00",
     icon: "🎓",
   },
   {
-    degree: "Advanced Level (A/L)",
-    school: "Science College",
-    period: "2020 - 2022",
-    location: "Colombo, Sri Lanka",
+    degree: "Advanced Level (A/L) & Ordinary Level (O/L)",
+    school: "Dharmaraja College",
+    period: "2008 - 2021",
+    location: "Kandy, Sri Lanka",
     description:
-      "Completed Advanced Level in Physical Science stream with Mathematics, Physics, and Chemistry. Achieved excellent results in all subjects.",
+      "Completed schooling from Grade 1 through Advanced Level, including both Ordinary Level and Advanced Level examinations. Successfully pursued the Commerce stream (Accounting, Economics, Business Studies) for A/L.",
     gpa: "3A passes",
+    icon: "📚",
+  },
+  {
+    degree: "AAT - Level I, Level II",
+    school: "Association of Accounting Technicians",
+    location: "Sri Lanka",
+    description:
+      "Level I – 2019: Gained foundational knowledge in accounting principles and business practices.\nLevel II – 2021: Advanced into financial accounting, auditing, and management-related subjects.",
     icon: "📚",
   },
 ]
@@ -34,7 +42,7 @@ export function EducationSection() {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A roadmap of my academic achievements and learning milestones that shaped my career in technology
+            An overview of my academic milestones and accomplishments that reflect my dedication to continuous learning.
           </p>
         </div>
 
@@ -71,25 +79,29 @@ export function EducationSection() {
                         <MapPin className="h-4 w-4 mr-2" />
                         {edu.location}
                       </div>
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-2 text-muted-foreground" />
-                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                          {edu.period}
-                        </span>
-                      </div>
+                      {edu.period && (
+                        <div className="flex items-center">
+                          <Calendar className="h-4 w-4 mr-2 text-muted-foreground" />
+                          <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            {edu.period}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Description */}
                     <p className="text-muted-foreground mb-4 leading-relaxed">{edu.description}</p>
 
                     {/* Academic Performance */}
-                    <div className="flex items-center">
-                      <Award className="h-4 w-4 mr-2 text-purple-500" />
-                      <span className="text-sm text-muted-foreground mr-2">Academic Performance:</span>
-                      <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {edu.gpa}
-                      </span>
-                    </div>
+                    {edu.gpa && (
+                      <div className="flex items-center">
+                        <Award className="h-4 w-4 mr-2 text-purple-500" />
+                        <span className="text-sm text-muted-foreground mr-2">Academic Performance:</span>
+                        <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                          {edu.gpa}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
