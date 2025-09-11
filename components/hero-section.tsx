@@ -1,12 +1,18 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react"
+import { Github, Linkedin, Mail, Download, ArrowDown, Target } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useEffect, useState } from "react"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -17,11 +23,11 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
           <source
-            src="/placeholder.mp4?height=1080&width=1920&query=futuristic tech coding matrix digital rain programming abstract neon"
+            src="/bg_vid.mp4"
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/70 to-background/65" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
@@ -36,11 +42,6 @@ export function HeroSection() {
         ))}
       </div>
 
-      {/* Theme Toggle */}
-      <div className="absolute top-6 right-6 z-20">
-        <ThemeToggle />
-      </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8 animate-fade-in-left">
@@ -51,42 +52,52 @@ export function HeroSection() {
                 Available for opportunities
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-balance leading-tight animate-fade-in-up">
-                Hey there, <span className="text-primary font-bold ">Hasith Gamlath</span>
+                Hey there, I'm <span className="text-primary font-bold ">Hasith Gamlath</span>
               </h1>
             </div>
             <p
               className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed font-light animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Passionate <span className="text-foreground font-medium">IT student</span> crafting innovative digital
-              experiences through <span className="text-primary font-medium">modern web technologies</span> and creative
-              problem-solving.
+              Passionate <span className="text-foreground font-medium">IT student</span> exploring modern web technologies to create 
+               <span className="text-primary font-medium"> innovative and user-friendly</span> digital solutions.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <Button
+              asChild
               size="lg"
               className="gap-3 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium group hover-lift"
             >
-              <Download className="h-5 w-5 group-hover:animate-bounce" />
-              Download Resume
+              <a
+                href="https://drive.google.com/file/d/1-RqF48wDf4NlC6u5bHc6Qn3Ke2cfDjTw/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                <Download className="h-5 w-5 group-hover:animate-bounce" />
+                Download Resume
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
+              asChild
               className="gap-3 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium group border-2 bg-transparent hover-lift"
             >
-              View My Work
-              <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
+              <a href="#projects" onClick={() => scrollToSection("#projects")}>
+                View My Work
+                <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
+              </a>
             </Button>
           </div>
 
           <div className="flex gap-3 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
             {[
-              { icon: Github, label: "GitHub", href: "#" },
-              { icon: Linkedin, label: "LinkedIn", href: "#" },
-              { icon: Mail, label: "Email", href: "#" },
+              { icon: Github,  label: "GitHub", href: "https://github.com/hasith12345" },
+              { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/hasith-gamlath-18b957274/" },
+              { icon: Mail, label: "Email", href: "mailto:hasithgamlath327@gmail.com" },
             ].map(({ icon: Icon, label, href }) => (
               <Button
                 key={label}
@@ -95,7 +106,7 @@ export function HeroSection() {
                 className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group hover-lift"
                 asChild
               >
-                <a href={href} aria-label={label}>
+                <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer">
                   <Icon className="h-5 w-5 sm:h-6 sm:w-6 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>
@@ -110,13 +121,11 @@ export function HeroSection() {
 
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
               <img
-                src="/professional-headshot-of-young-it-student-develope.jpg"
+                src="/cv profile.png"
                 alt="Professional headshot"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-lg border-4 border-background group-hover:rotate-12 transition-transform duration-300">
-                <span className="text-2xl sm:text-3xl">💻</span>
-              </div>
+              
             </div>
 
             {mounted && (

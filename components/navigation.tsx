@@ -42,26 +42,25 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">R</span>
+            <div className=" items-center justify-center">
+              <span className="text-white font-bold text-xl">Hasith</span>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-right space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Right side */}
-          <div className="flex items-center space-x-4">
+          {/* Right side: nav items, theme toggle, contact button */}
+          <div className="flex items-center space-x-8">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
             <ThemeToggle />
             <Button
               onClick={() => scrollToSection("#contact")}
@@ -69,7 +68,6 @@ export function Navigation() {
             >
               Contact Me
             </Button>
-
             {/* Mobile menu button */}
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2">
               {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
