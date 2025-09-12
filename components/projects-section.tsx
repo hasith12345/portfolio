@@ -8,7 +8,7 @@ const projects = [
       "A full-stack salon management system designed to streamline salon operations and enhance customer experience. The platform includes features such as salon profile management and appointment scheduling for seamless service handling.",
     image: "/project1.png",
     technologies: [
-      "React.js",
+      "React",
       "Express.js",
       "Node.js",
       "TypeScript",
@@ -27,7 +27,7 @@ const projects = [
     description:
       "Developed a real-time chat app with one-on-one messaging, typing indicators, and online status, featuring secure authentication and a responsive UI.",
     image: "/project2.png",
-    technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+    technologies: ["React", "Express.js", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
     demo: "#",
     code: "https://github.com/hasith12345/ChatApp"
   },
@@ -54,7 +54,7 @@ const projects = [
     description:
       "Developed a personal portfolio website to showcase projects and skills, featuring a modern design and responsive layout.",
     image: "/project5.png",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
+    technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
     demo: "#",
     code: "https://github.com/hasith12345/portfolio"
   },
