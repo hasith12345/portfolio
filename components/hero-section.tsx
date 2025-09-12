@@ -32,7 +32,7 @@ export function HeroSection() {
       </div>
 
       <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-4">
-        {["Hero", "About", "Skills", "Education", "Projects", "Contact"].map((section, index) => (
+        {["Hero", "About", "Education", "Projects", "Skills", "Contact"].map((section, index) => (
           <div key={section} className="group flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary transition-colors cursor-pointer" />
             <span className="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">

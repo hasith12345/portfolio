@@ -54,7 +54,7 @@ const projects = [
     description:
       "Developed a personal portfolio website to showcase projects and skills, featuring a modern design and responsive layout.",
     image: "/project5.png",
-    technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
     demo: "#",
     code: "https://github.com/hasith12345/portfolio"
   },
