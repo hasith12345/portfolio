@@ -1,42 +1,73 @@
 import { Card } from "@/components/ui/card"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "Fiskil",
+    title: "SalonMe | Salon Management Platform",
     description:
-      "A comprehensive financial management platform that helps businesses track expenses, manage invoices, and analyze financial data with real-time insights and automated reporting features.",
-    image: "/modern-fintech-dashboard-with-purple-gradient.jpg",
+      "A full-stack salon management system designed to streamline salon operations and enhance customer experience. The platform includes features such as salon profile management and appointment scheduling for seamless service handling.",
+    image: "/project1.png",
     technologies: [
-      "React",
-      "Next.js",
+      "React.js",
+      "Express.js",
+      "Node.js",
       "TypeScript",
-      "Nest.js",
-      "PostgreSQL",
+      "MongoDB",
       "Tailwindcss",
-      "Figma",
-      "Cypress",
-      "Storybook",
+      "Cloudinary",
       "Git",
+      "Figma",
+
     ],
-    demo: "#",
+    demo: "https://drive.google.com/file/d/1TcRFVhyDxz5zeVGt_bgVvV-vWr9l1l0v/view?usp=sharing",
+    code: "https://github.com/hasith12345/salon-management-system",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Real-Time Chat Application",
     description:
-      "Full-stack e-commerce solution with advanced product management, secure payment processing, inventory tracking, and comprehensive analytics dashboard for business insights.",
-    image: "/modern-ecommerce-platform.png",
-    technologies: ["Next.js", "TypeScript", "Stripe", "MongoDB", "Redis", "Docker", "AWS"],
+      "Developed a real-time chat app with one-on-one messaging, typing indicators, and online status, featuring secure authentication and a responsive UI.",
+    image: "/project2.png",
+    technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
     demo: "#",
+    code: "#"
   },
   {
-    title: "Task Management System",
+    title: "Real-Time Household Water Management System",
     description:
-      "Collaborative project management tool featuring real-time updates, advanced task scheduling, team collaboration, file sharing, and comprehensive project analytics.",
-    image: "/project-management-dashboard.png",
-    technologies: ["React", "Node.js", "Socket.io", "PostgreSQL", "GraphQL", "Jest"],
+      "Developed a smart Water Management System in the first year to promote household water conservation through real-time monitoring. Integrated ESP32 with a web dashboard to track water levels, usage, and quality, while sending alerts to prevent overflows and support sustainable living.",
+    image: "/project3.png",
+    technologies: ["ESP32", "C++", "IoT Sensors", "React", "Firebase"],
     demo: "#",
+    code: "#"
   },
+  {
+    title: "Line Following Car",
+    description:
+      "Engineered an autonomous line-following robot with precise control systems and sensor-based navigation, tested for reliability in a competitive environment.",
+    image: "/project4.png",
+    technologies: ["C++", "ESP32", "IR sensors", "Motor driver"],
+    demo: "https://drive.google.com/file/d/1ywqkLB3eHIwsQ-eAV4pXE7gK39KH9WfR/view?usp=drive_link",
+    code: "https://github.com/hasith12345/line-following-car"
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Developed a personal portfolio website to showcase projects and skills, featuring a modern design and responsive layout.",
+    image: "/project5.png",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
+    demo: "#",
+    code: "#"
+  },
+  {
+    title: "Medical Appointment Booking System",
+    description:
+      "A secure medical appointment system enabling patients to book online and administrators to manage doctors and schedules effectively, with features like user authentication, doctor management, and a responsive admin dashboard.",
+    image: "/project6.png",
+    technologies: ["Laravel 11","PHP", "MySQL", "Blade", "HTML", "CSS", "JavaScript"],
+    demo: "#",
+    code: "#"
+  },
+  
 ]
 
 export function ProjectsSection() {
@@ -87,13 +118,20 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Project Link */}
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-6">
                     <a
                       href={project.demo}
                       className="inline-flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors group"
                     >
                       <ExternalLink className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       <span className="font-medium">View Project</span>
+                    </a>
+                    <a
+                      href={project.code}
+                      className="inline-flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors group"
+                    >
+                      <Github className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      <span className="font-medium">View Code</span>
                     </a>
                   </div>
                 </div>
