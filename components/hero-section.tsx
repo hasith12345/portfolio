@@ -121,7 +121,7 @@ export function HeroSection() {
 
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
               <img
-                src="/cv profile.png"
+                src="/cv profile.jpg"
                 alt="Professional headshot"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
