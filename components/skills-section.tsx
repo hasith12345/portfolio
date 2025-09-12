@@ -2,21 +2,51 @@
 
 import { Card } from "@/components/ui/card"
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
+import { Cpu } from "lucide-react"
+import { 
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs, 
+  SiNodedotjs, SiPython, SiGit, SiDocker, 
+  SiMongodb, SiPostgresql, SiFigma, SiC,
+  SiOpenjdk, SiExpress, SiHtml5, SiTailwindcss,
+  SiCss3, SiMysql, SiGithub,
+  SiCanva, SiArduino
+} from "react-icons/si"
+
 
 const skills = [
-  { name: "JavaScript", icon: "⚡", color: "from-yellow-400 to-orange-500" },
-  { name: "TypeScript", icon: "🔷", color: "from-blue-400 to-blue-600" },
-  { name: "React", icon: "⚛️", color: "from-cyan-400 to-blue-500" },
-  { name: "Next.js", icon: "▲", color: "from-gray-700 to-gray-900" },
-  { name: "Node.js", icon: "🟢", color: "from-green-400 to-green-600" },
-  { name: "Python", icon: "🐍", color: "from-blue-500 to-yellow-500" },
-  { name: "Git", icon: "📝", color: "from-orange-400 to-red-500" },
-  { name: "Docker", icon: "🐳", color: "from-blue-400 to-cyan-500" },
-  { name: "MongoDB", icon: "🍃", color: "from-green-500 to-green-700" },
-  { name: "PostgreSQL", icon: "🐘", color: "from-blue-600 to-indigo-600" },
-  { name: "AWS", icon: "☁️", color: "from-orange-400 to-yellow-500" },
-  { name: "Figma", icon: "🎨", color: "from-purple-400 to-pink-500" },
+  // Programming Languages
+  { name: "C", icon: SiC, color: "from-gray-400 to-gray-600" },
+  { name: "Java", icon: SiOpenjdk, color: "from-red-500 to-red-700" },
+  { name: "Python", icon: SiPython, color: "from-yellow-400 to-blue-500" },
+  { name: "TypeScript", icon: SiTypescript, color: "from-blue-400 to-blue-600" },
+
+  // Backend
+  { name: "Node.js", icon: SiNodedotjs, color: "from-green-400 to-green-600" },
+  { name: "Express.js", icon: SiExpress, color: "from-gray-700 to-black" },
+
+  // Frontend
+  { name: "React.js", icon: SiReact, color: "from-cyan-400 to-blue-500" },
+  { name: "HTML", icon: SiHtml5, color: "from-orange-500 to-red-500" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "from-cyan-400 to-cyan-600" },
+  { name: "CSS", icon: SiCss3, color: "from-blue-400 to-blue-600" },
+
+  // Databases
+  { name: "MongoDB", icon: SiMongodb, color: "from-green-500 to-green-700" },
+  { name: "MySQL", icon: SiMysql, color: "from-blue-500 to-indigo-600" },
+  { name: "MSSQL", icon: SiMysql, color: "from-red-600 to-red-800" },
+
+  // Version Control
+  { name: "Git", icon: SiGit, color: "from-orange-500 to-red-600" },
+  { name: "GitHub", icon: SiGithub, color: "from-gray-800 to-gray-900" },
+
+  // Other Technical Skills
+  { name: "Figma", icon: SiFigma, color: "from-purple-400 to-pink-500" },
+  { name: "Canva", icon: SiCanva, color: "from-cyan-400 to-blue-600" },
+  { name: "Arduino", icon: SiArduino, color: "from-blue-400 to-teal-500" },
+  { name: "ESP32", icon: Cpu, color: "from-gray-500 to-gray-700" }, // fallback
 ]
+
 
 export function SkillsSection() {
   const [visibleCards, setVisibleCards] = useState<number[]>([])
@@ -65,12 +95,12 @@ export function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
           {skills.map((skill, index) => (
             <Card
               key={skill.name}
               className={`
-                p-4 sm:p-6 text-center group cursor-pointer
+                p-3 sm:p-4 text-center group cursor-pointer
                 bg-card/80 backdrop-blur-sm border-border/50
                 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
                 transition-all duration-500 hover-lift
@@ -84,19 +114,18 @@ export function SkillsSection() {
               <div className="relative">
                 <div
                   className={`
-                  w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 rounded-2xl
+                  w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl
                   bg-gradient-to-br ${skill.color} p-0.5
                   group-hover:scale-110 group-hover:rotate-6 transition-all duration-300
                 `}
                 >
-                  <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
-                    <span className="text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300">
-                      {skill.icon}
-                    </span>
+                  <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
+                    <skill.icon className="w-8 h-8 text-current group-hover:scale-110 transition-transform duration-300" />
                   </div>
+
                 </div>
 
-                <h3 className="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors duration-300">
+                <h3 className="font-semibold text-xs sm:text-sm group-hover:text-primary transition-colors duration-300">
                   {skill.name}
                 </h3>
 

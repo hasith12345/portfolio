@@ -29,7 +29,7 @@ const projects = [
     image: "/project2.png",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
     demo: "#",
-    code: "#"
+    code: "https://github.com/hasith12345/ChatApp"
   },
   {
     title: "Real-Time Household Water Management System",
@@ -38,7 +38,7 @@ const projects = [
     image: "/project3.png",
     technologies: ["ESP32", "C++", "IoT Sensors", "React", "Firebase"],
     demo: "#",
-    code: "#"
+    code: "https://github.com/hasith12345/Household-Water-Management-System"
   },
   {
     title: "Line Following Car",
@@ -56,7 +56,7 @@ const projects = [
     image: "/project5.png",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
     demo: "#",
-    code: "#"
+    code: "https://github.com/hasith12345/portfolio"
   },
   {
     title: "Medical Appointment Booking System",
@@ -65,7 +65,16 @@ const projects = [
     image: "/project6.png",
     technologies: ["Laravel 11","PHP", "MySQL", "Blade", "HTML", "CSS", "JavaScript"],
     demo: "#",
-    code: "#"
+    code: "https://github.com/hasith12345/medical-appointment-booking-system"
+  },
+  {
+    title: "GitHub Repository Dashboard",
+    description:
+      "A GitHub Statistics Dashboard displaying real-time data like stars, forks, and contributors via the GitHub API. Built with a Ballerina backend, providing an interactive interface for exploring repository insights.",
+    image: "/project7.png",
+    technologies: ["Ballerina", "GitHub API", "HTML", "CSS", "JavaScript"],
+    demo: "#",
+    code: "https://github.com/hasith12345/github_stats_dashboard"
   },
   
 ]
