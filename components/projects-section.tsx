@@ -74,7 +74,7 @@ const projects = [
     image: "/project7.png",
     technologies: ["Ballerina", "GitHub API", "HTML", "CSS", "JavaScript"],
     demo: "#",
-    code: "https://github.com/hasith12345/github_stats_dashboard"
+    code: "https://github.com/hasith12345/github-statistic-dashboard"
   },
   
 ]
