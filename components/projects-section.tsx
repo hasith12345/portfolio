@@ -37,7 +37,7 @@ const projects = [
       "Developed a smart Water Management System in the first year to promote household water conservation through real-time monitoring. Integrated ESP32 with a web dashboard to track water levels, usage, and quality, while sending alerts to prevent overflows and support sustainable living.",
     image: "/project3.png",
     technologies: ["ESP32", "C++", "IoT Sensors", "React", "Firebase"],
-    demo: "#",
+    demo: "https://www.linkedin.com/posts/hasith-gamlath-18b957274_watermanagement-smarthome-iot-activity-7241093263808479234-Kfc4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMPcTsB0hg1MQqGPMTxTASEJyhA7fWbEzQ",
     code: "https://github.com/hasith12345/Household-Water-Management-System"
   },
   {
