@@ -31,17 +31,6 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-4">
-        {["Hero", "About", "Education", "Projects", "Skills", "Contact"].map((section, index) => (
-          <div key={section} className="group flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary transition-colors cursor-pointer" />
-            <span className="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
-              {section}
-            </span>
-          </div>
-        ))}
-      </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8 animate-fade-in-left">
