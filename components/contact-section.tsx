@@ -122,40 +122,6 @@ export function ContactSection() {
                 </div>
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className="flex gap-4">
-              <Button
-                variant="outline"
-                size="lg"
-                className="group hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://github.com/hasith12345" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="group hover:border-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/hasith-gamlath-18b957274/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="group hover:border-sky-500 hover:bg-sky-500 hover:text-white transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                </a>
-              </Button>
-            </div>
           </div>
 
           {/* Right Contact Form */}

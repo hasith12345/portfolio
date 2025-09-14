@@ -8,9 +8,8 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Hasith Gamlath - Portfolio",
-  description: "Modern IT student portfolio showcasing skills, projects, and experience",
-  generator: "v0.app",
+  title: "Hasith Gamlath",
+  description: "Portfolio of Hasith Gamlath, a Full Stack Developer",
 }
 
 export default function RootLayout({
