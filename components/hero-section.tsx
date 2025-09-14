@@ -40,8 +40,9 @@ export function HeroSection() {
                 <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
                 Available for opportunities
               </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance leading-tight animate-fade-in-up">Hey there, I'm</h2>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-balance leading-tight animate-fade-in-up">
-                Hey there, I'm <span className="text-primary font-bold ">Hasith Gamlath</span>
+                <span className="text-primary font-bold ">Hasith Gamlath</span>
               </h1>
             </div>
             <p
