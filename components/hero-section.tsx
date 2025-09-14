@@ -32,7 +32,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center pt-20 sm:pt-16 lg:pt-0">
         <div className="space-y-8 animate-fade-in-left">
           <div className="space-y-6">
             <div className="space-y-2">
@@ -61,7 +61,7 @@ export function HeroSection() {
               className="gap-3 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium group hover-lift"
             >
               <a
-                href="https://drive.google.com/file/d/1-RqF48wDf4NlC6u5bHc6Qn3Ke2cfDjTw/view?usp=drive_link"
+                href="https://drive.google.com/file/d/16PtP8CrqH4DKfF5zahHWNQf-pN5L2TMO/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
