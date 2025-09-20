@@ -50,15 +50,6 @@ const projects = [
     code: "https://github.com/hasith12345/line-following-car"
   },
   {
-    title: "Portfolio Website",
-    description:
-      "Developed a personal portfolio website to showcase projects and skills, featuring a modern design and responsive layout.",
-    image: "/project5.png",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript","EmailJS"],
-    demo: "#",
-    code: "https://github.com/hasith12345/portfolio"
-  },
-  {
     title: "Medical Appointment Booking System",
     description:
       "A secure medical appointment system enabling patients to book online and administrators to manage doctors and schedules effectively, with features like user authentication, doctor management, and a responsive admin dashboard.",
