@@ -8,6 +8,7 @@ const sections = [
   { id: "education", label: "Education" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
+  { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
 ]
 
@@ -32,7 +33,15 @@ export function ScrollNavigation() {
         const section = document.getElementById(sections[i].id)
         if (section) {
           const sectionTop = section.offsetTop
-          if (scrollPosition >= sectionTop) {
+          const sectionBottom = sectionTop + section.offsetHeight
+          
+          // Check if we're in this section
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            setActiveSection(sections[i].id)
+            break
+          }
+          // Fallback for the last section or when at the bottom
+          if (i === sections.length - 1 && scrollPosition >= sectionTop) {
             setActiveSection(sections[i].id)
             break
           }
@@ -40,14 +49,51 @@ export function ScrollNavigation() {
       }
     }
 
+    // Intersection Observer for more accurate detection
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0
+    }
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    // Observe all sections
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id)
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
     // Initial check
     handleScroll()
 
-    // Add scroll listener
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    // Add scroll listener with throttling for better performance
+    let ticking = false
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener("scroll", throttledScroll, { passive: true })
     
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", throttledScroll)
+      observer.disconnect()
     }
   }, [])
 
