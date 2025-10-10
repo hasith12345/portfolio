@@ -12,7 +12,6 @@ const navItems = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Achievements", href: "#achievements" },
-  { name: "Contact", href: "#contact" },
 ]
 
 export function Navigation() {
