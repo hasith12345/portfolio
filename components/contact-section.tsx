@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, ArrowRight } from "lucide-react"
 import { useState } from "react"
-import emailjs from "@emailjs/browser"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -17,6 +16,10 @@ export function ContactSection() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ 
+    type: null, 
+    message: '' 
+  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
@@ -25,32 +28,52 @@ export function ContactSection() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setStatus({ type: null, message: '' })
 
-    emailjs
-      .send(
-        "service_so1uqjr",
-        "template_e0h5nkn",
-        {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        },
-        "yaTbNYvfw43Lk1ocX"
-      )
-      .then(
-        () => {
-          alert("✅ Message sent successfully!")
-          setFormData({ name: "", email: "", message: "" })
-        },
-        (error) => {
-          alert("❌ Failed to send message. Try again.")
-          console.error(error)
-        }
-      )
-      .finally(() => setIsSubmitting(false))
+        }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus({ 
+          type: 'success', 
+          message: '✅ Message sent successfully! I\'ll get back to you soon.' 
+        })
+        setFormData({ name: "", email: "", message: "" })
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setStatus({ type: null, message: '' })
+        }, 5000)
+      } else {
+        setStatus({ 
+          type: 'error', 
+          message: '❌ Failed to send message. Please try again or email me directly.' 
+        })
+      }
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setStatus({ 
+        type: 'error', 
+        message: '❌ Something went wrong. Please try again later.' 
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -127,6 +150,19 @@ export function ContactSection() {
           {/* Right Contact Form */}
           <Card className="p-8 bg-card/80 backdrop-blur-sm border-border/50 shadow-2xl animate-fade-in-right">
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Status Message */}
+              {status.type && (
+                <div
+                  className={`p-4 rounded-lg border ${
+                    status.type === 'success'
+                      ? 'bg-green-500/10 border-green-500/50 text-green-600 dark:text-green-400'
+                      : 'bg-red-500/10 border-red-500/50 text-red-600 dark:text-red-400'
+                  } animate-fade-in`}
+                >
+                  {status.message}
+                </div>
+              )}
+
               {/* Name */}
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-sm font-semibold text-foreground">
