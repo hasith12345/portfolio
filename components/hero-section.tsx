@@ -61,7 +61,7 @@ export function HeroSection() {
               className="gap-3 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium group hover-lift"
             >
               <a
-                href="https://drive.google.com/file/d/1MKBHrbv-XFUxmU-F6esMljowm7OpoA7y/view?usp=sharing"
+                href="https://drive.google.com/file/d/1bXT230qMWCy34C9K44OkbVR5X413tOVN/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
