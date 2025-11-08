@@ -1,6 +1,56 @@
 "use client"
 
-import { useCursorFollower } from "@/hooks/use-cursor-follower"
+import { useEffect, useRef, useState } from "react"
+
+function useCursorFollower() {
+  const [circlePosition, setCirclePosition] = useState({ x: -9999, y: -9999 })
+  const [dotPosition, setDotPosition] = useState({ x: -9999, y: -9999 })
+  const [isVisible, setIsVisible] = useState(false)
+
+  const rafRef = useRef<number | null>(null)
+  const targetRef = useRef({ x: -9999, y: -9999 })
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      const x = e.clientX
+      const y = e.clientY
+      setCirclePosition({ x, y })
+      targetRef.current = { x, y }
+      setIsVisible(true)
+
+      if (rafRef.current == null) {
+        const loop = () => {
+          setDotPosition((prev) => {
+            const tx = targetRef.current.x
+            const ty = targetRef.current.y
+            const nx = prev.x + (tx - prev.x) * 0.2
+            const ny = prev.y + (ty - prev.y) * 0.2
+            return { x: nx, y: ny }
+          })
+          rafRef.current = requestAnimationFrame(loop)
+        }
+        rafRef.current = requestAnimationFrame(loop)
+      }
+    }
+
+    const onLeave = () => {
+      setIsVisible(false)
+    }
+
+    window.addEventListener("mousemove", onMove)
+    window.addEventListener("mouseenter", onMove)
+    window.addEventListener("mouseleave", onLeave)
+
+    return () => {
+      window.removeEventListener("mousemove", onMove)
+      window.removeEventListener("mouseenter", onMove)
+      window.removeEventListener("mouseleave", onLeave)
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current)
+    }
+  }, [])
+
+  return { circlePosition, dotPosition, isVisible }
+}
 
 export function CursorFollower() {
   const { circlePosition, dotPosition, isVisible } = useCursorFollower()
