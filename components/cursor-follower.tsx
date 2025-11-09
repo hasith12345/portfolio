@@ -89,7 +89,7 @@ export function CursorFollower() {
           transform: translate(-50%, -50%);
           z-index: 9999;
           transition: opacity 0.3s ease-out;
-          box-shadow: 0 0 8px rgba(147, 112, 219, 0.6);
+          box-shadow: 0 0 8px color-mix(in srgb, var(--primary) 60%, transparent);
         }
 
         .cursor-dot.hidden {

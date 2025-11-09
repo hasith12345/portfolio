@@ -75,7 +75,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 text-primary">
             Featured Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -87,7 +87,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-purple-500/30 transition-all duration-300"
+              className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-300"
             >
               <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
                 {/* Project Image */}
@@ -110,7 +110,7 @@ export function ProjectsSection() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-secondary/80 text-secondary-foreground text-sm rounded-full border border-border/50 hover:border-purple-500/30 transition-colors"
+                        className="px-3 py-1 bg-secondary/80 text-secondary-foreground text-sm rounded-full border border-border/50 hover:border-primary/30 transition-colors"
                       >
                         {tech}
                       </span>
@@ -121,14 +121,14 @@ export function ProjectsSection() {
                   <div className="flex items-center gap-6">
                     <a
                       href={project.demo}
-                      className="inline-flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors group"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
                     >
                       <ExternalLink className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       <span className="font-medium">View Project</span>
                     </a>
                     <a
                       href={project.code}
-                      className="inline-flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors group"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
                     >
                       <Github className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       <span className="font-medium">View Code</span>

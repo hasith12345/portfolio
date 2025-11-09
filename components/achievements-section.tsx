@@ -23,7 +23,7 @@ export function AchievementsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
             Achievements &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+            <span className="text-primary">
               Activities
             </span>
           </h2>
@@ -36,7 +36,7 @@ export function AchievementsSection() {
             return (
               <div
                 key={index}
-                className="group bg-card border border-border/50 rounded-xl p-18 hover:shadow-xl transition-all duration-300 hover:border-purple-500/30 hover:-translate-y-1"
+                className="group bg-card border border-border/50 rounded-xl p-18 hover:shadow-xl transition-all duration-300 hover:border-primary/30 hover:-translate-y-1"
               >
                 <div className="flex flex-col sm:flex-row items-start gap-6">
                   {/* Left Content */}
@@ -52,7 +52,7 @@ export function AchievementsSection() {
                       {/* Header Content */}
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-2">
-                          <h3 className="text-lg font-bold text-foreground group-hover:text-purple-500 transition-colors">
+                          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                             {achievement.title}
                           </h3>
                         </div>
@@ -81,7 +81,7 @@ export function AchievementsSection() {
                         href={achievement.linkedinUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-blue-500 hover:text-blue-600 transition-colors group/link"
+                        className="inline-flex items-center gap-2 text-sm text-primary hover:text-blue-600 transition-colors group/link"
                       >
                         <ExternalLink className="h-4 w-4 group-hover/link:scale-110 transition-transform" />
                         View LinkedIn Post

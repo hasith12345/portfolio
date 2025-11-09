@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download, ArrowDown, Target } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
+// import { ThemeToggle } from "@/components/theme-toggle"
 import { useEffect, useState } from "react"
 
 export function HeroSection() {
@@ -36,10 +36,6 @@ export function HeroSection() {
         <div className="space-y-8 animate-fade-in-left">
           <div className="space-y-6">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/80 border border-primary text-sm font-medium text-white animate-slide-in-bottom">
-                <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                Available for opportunities
-              </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance leading-tight animate-fade-in-up">Hey there, I'm</h2>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-balance leading-tight animate-fade-in-up">
                 <span className="text-primary font-bold ">Hasith Gamlath</span>
@@ -54,33 +50,17 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <Button
-              asChild
-              size="lg"
-              className="gap-3 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium group hover-lift"
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <a
+              href="https://drive.google.com/uc?export=view&id=1bXT230qMWCy34C9K44OkbVR5X413tOVN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 group hover-lift transition-all duration-300"
+              title="Download Resume"
             >
-              <a
-                href="https://drive.google.com/file/d/1bXT230qMWCy34C9K44OkbVR5X413tOVN/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-              >
-                <Download className="h-5 w-5 group-hover:animate-bounce" />
-                Download Resume
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="gap-3 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium group border-2 bg-transparent hover-lift"
-            >
-              <a href="#projects" onClick={() => scrollToSection("#projects")}>
-                View My Work
-                <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
-              </a>
-            </Button>
+              <Download className="h-6 w-6 sm:h-7 sm:w-7 group-hover:animate-bounce" />
+              <span className="text-lg sm:text-xl font-medium text-foreground">Download Resume</span>
+            </a>
           </div>
 
           <div className="flex gap-3 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
@@ -106,10 +86,10 @@ export function HeroSection() {
 
         <div className="flex justify-center lg:justify-end animate-fade-in-right">
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity animate-pulse" />
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-accent/30 rounded-2xl blur-lg opacity-50" />
+            <div className="absolute -inset-2 bg-primary/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity animate-pulse" />
+            <div className="absolute -inset-2 bg-primary/30 rounded-2xl blur-lg opacity-50" />
 
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-2 border-primary shadow-1xl shadow-primary/30">
               <img
                 src="/cv profile.jpg"
                 alt="Professional headshot"

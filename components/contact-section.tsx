@@ -78,9 +78,9 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="py-20 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
@@ -104,7 +104,7 @@ export function ContactSection() {
             <div className="space-y-2">
               {/* Email */}
               <div className="group flex items-center gap-6 p-2 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -120,7 +120,7 @@ export function ContactSection() {
 
               {/* Phone */}
               <div className="group flex items-center gap-6 p-2 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -136,7 +136,7 @@ export function ContactSection() {
 
               {/* Location */}
               <div className="group flex items-center gap-6 p-2 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -213,7 +213,7 @@ export function ContactSection() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full h-12 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white font-semibold transition-all duration-300 group"
+                className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-semibold transition-all duration-300 group"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -222,8 +222,8 @@ export function ContactSection() {
                     Sending...
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2">
-                    <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex text-black items-center gap-2">
+                    <Send className="h-4 w-4 text-black group-hover:translate-x-1 transition-transform" />
                     Send Message
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>

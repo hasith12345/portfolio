@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
+// import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
@@ -64,10 +64,10 @@ export function Navigation() {
                   </button>
                 ))}
               </div>
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
               <Button
                 onClick={() => scrollToSection("#contact")}
-                className="hidden md:inline-flex bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
+                className="hidden md:inline-flex text-black bg-primary hover:bg-primary/90"
               >
                 Contact Me
               </Button>
@@ -93,7 +93,7 @@ export function Navigation() {
                 ))}
                 <Button
                   onClick={() => scrollToSection("#contact")}
-                  className="mt-4 w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
+                  className="mt-4 w-full bg-primary hover:bg-primary/90"
                 >
                   Contact Me
                 </Button>

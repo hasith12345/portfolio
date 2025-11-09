@@ -41,7 +41,7 @@ const skills = [
   { name: "GitHub", icon: SiGithub, color: "from-gray-800 to-gray-900" },
 
   // Other Technical Skills
-  { name: "Figma", icon: SiFigma, color: "from-purple-400 to-pink-500" },
+  { name: "Figma", icon: SiFigma, color: "from-primary to-primary/70" },
   { name: "Canva", icon: SiCanva, color: "from-cyan-400 to-blue-600" },
   { name: "Arduino", icon: SiArduino, color: "from-blue-400 to-teal-500" },
   { name: "ESP32", icon: Cpu, color: "from-gray-500 to-gray-700" }, // fallback
