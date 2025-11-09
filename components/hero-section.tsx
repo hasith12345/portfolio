@@ -50,12 +50,12 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <div className="flex animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <a
               href="https://drive.google.com/uc?export=view&id=1bXT230qMWCy34C9K44OkbVR5X413tOVN"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 group hover-lift transition-all duration-300"
+              className="flex items-center gap-3 px-6 py-3 group hover-lift transition-all duration-300"
               title="Download Resume"
             >
               <Download className="h-6 w-6 sm:h-7 sm:w-7 group-hover:animate-bounce" />
