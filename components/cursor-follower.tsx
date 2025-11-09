@@ -63,7 +63,7 @@ export function CursorFollower() {
           pointer-events: none;
           width: 40px;
           height: 40px;
-          border: 0.5px solid #0066ff;
+          border: 0.5px solid var(--primary);
           border-radius: 50%;
           left: 0;
           top: 0;
@@ -82,14 +82,14 @@ export function CursorFollower() {
           pointer-events: none;
           width: 8px;
           height: 8px;
-          background: #0066ff;
+          background: var(--primary);
           border-radius: 50%;
           left: 0;
           top: 0;
           transform: translate(-50%, -50%);
           z-index: 9999;
           transition: opacity 0.3s ease-out;
-          box-shadow: 0 0 8px rgba(0, 102, 255, 0.6);
+          box-shadow: 0 0 8px rgba(147, 112, 219, 0.6);
         }
 
         .cursor-dot.hidden {
@@ -97,6 +97,7 @@ export function CursorFollower() {
           pointer-events: none;
         }
       `}</style>
+
 
       {/* Circle outline - follows cursor */}
       <div
