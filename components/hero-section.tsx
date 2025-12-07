@@ -45,8 +45,8 @@ export function HeroSection() {
               className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed font-light animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Passionate <span className="text-foreground font-medium">IT student</span> exploring modern web technologies to create 
-               <span className="text-primary font-medium"> innovative and user-friendly</span> digital solutions.
+              Passionate <span className="text-foreground font-medium">IT student</span> and <span className="text-foreground text-primary font-medium">Full-Stack Developer</span> exploring modern web technologies to create 
+               innovative and user-friendly digital solutions.
             </p>
           </div>
 
