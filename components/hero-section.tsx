@@ -52,14 +52,14 @@ export function HeroSection() {
 
           <div className="flex animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <a
-              href="https://drive.google.com/uc?export=view&id=1bXT230qMWCy34C9K44OkbVR5X413tOVN"
+              href="https://drive.google.com/file/d/162CfZVaX_BlsfHzbL13IijFPGkzpE_XK/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-6 py-3 group hover-lift transition-all duration-300"
               title="Download Resume"
             >
               <Download className="h-6 w-6 sm:h-7 sm:w-7 group-hover:animate-bounce" />
-              <span className="text-lg sm:text-xl font-medium text-foreground">Download Resume</span>
+              <span className="text-lg sm:text-xl font-medium text-foreground">Download CV</span>
             </a>
           </div>
 
