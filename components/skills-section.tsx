@@ -3,48 +3,46 @@
 import { Card } from "@/components/ui/card"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Cpu } from "lucide-react"
-import { 
-  SiJavascript, SiTypescript, SiReact, SiNextdotjs, 
-  SiNodedotjs, SiPython, SiGit, SiDocker, 
-  SiMongodb, SiPostgresql, SiFigma, SiC,
-  SiOpenjdk, SiExpress, SiHtml5, SiTailwindcss,
-  SiCss3, SiMysql, SiGithub,
-  SiCanva, SiArduino
-} from "react-icons/si"
-
 
 const skills = [
   // Programming Languages
-  { name: "C", icon: SiC, color: "from-gray-400 to-gray-600" },
-  { name: "Java", icon: SiOpenjdk, color: "from-red-500 to-red-700" },
-  { name: "Python", icon: SiPython, color: "from-yellow-400 to-blue-500" },
-  { name: "TypeScript", icon: SiTypescript, color: "from-blue-400 to-blue-600" },
+  { name: "C", image: "/C.png", color: "from-gray-400 to-gray-600" },
+  { name: "Java", image: "/java.svg", color: "from-red-500 to-red-700" },
+  { name: "Python", image: "/python.png", color: "from-yellow-400 to-blue-500" },
+  { name: "TypeScript", image: "/typescript.png", color: "from-blue-400 to-blue-600" },
 
   // Backend
-  { name: "Node.js", icon: SiNodedotjs, color: "from-green-400 to-green-600" },
-  { name: "Express.js", icon: SiExpress, color: "from-gray-700 to-black" },
+  { name: "Node.js", image: "/node.png", color: "from-green-400 to-green-600" },
+  { name: "Express.js", image: "/express.png", color: "from-gray-700 to-black" },
+  { name: "Django", image: "/django.png", color: "from-green-600 to-green-800" },
 
   // Frontend
-  { name: "React.js", icon: SiReact, color: "from-cyan-400 to-blue-500" },
-  { name: "HTML", icon: SiHtml5, color: "from-orange-500 to-red-500" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "from-cyan-400 to-cyan-600" },
-  { name: "CSS", icon: SiCss3, color: "from-blue-400 to-blue-600" },
+  { name: "React.js", image: "/React.png", color: "from-cyan-400 to-blue-500" },
+  { name: "Next.js", image: "/next.webp", color: "from-black to-gray-800" },
+  { name: "JavaScript", image: "/javaScript.webp", color: "from-yellow-400 to-yellow-600" },
+  { name: "HTML", image: "/html.png", color: "from-orange-500 to-red-500" },
+  { name: "Tailwind CSS", image: "/tailwind.png", color: "from-cyan-400 to-cyan-600" },
+  { name: "CSS", image: "/css.png", color: "from-blue-400 to-blue-600" },
 
   // Databases
-  { name: "MongoDB", icon: SiMongodb, color: "from-green-500 to-green-700" },
-  { name: "MySQL", icon: SiMysql, color: "from-blue-500 to-indigo-600" },
-  { name: "MSSQL", icon: SiMysql, color: "from-red-600 to-red-800" },
+  { name: "MongoDB", image: "/mongodb.svg", color: "from-green-500 to-green-700" },
+  { name: "MySQL", image: "/mysql.png", color: "from-blue-500 to-indigo-600" },
+  { name: "MSSQL", image: "/mssql.png", color: "from-red-600 to-red-800" },
+  { name: "PostgreSQL", image: "/postgresql.svg", color: "from-blue-600 to-blue-800" },
 
   // Version Control
-  { name: "Git", icon: SiGit, color: "from-orange-500 to-red-600" },
-  { name: "GitHub", icon: SiGithub, color: "from-gray-800 to-gray-900" },
+  { name: "Git", image: "/git.png", color: "from-orange-500 to-red-600" },
+  { name: "GitHub", image: "/github.png", color: "from-gray-800 to-gray-900" },
 
   // Other Technical Skills
-  { name: "Figma", icon: SiFigma, color: "from-primary to-primary/70" },
-  { name: "Canva", icon: SiCanva, color: "from-cyan-400 to-blue-600" },
-  { name: "Arduino", icon: SiArduino, color: "from-blue-400 to-teal-500" },
-  { name: "ESP32", icon: Cpu, color: "from-gray-500 to-gray-700" }, // fallback
+  { name: "Docker", image: "/docker.png", color: "from-blue-500 to-blue-700" },
+  { name: "Figma", image: "/figma.png", color: "from-primary to-primary/70" },
+  { name: "Canva", image: "/canva.svg", color: "from-cyan-400 to-blue-600" },
+  { name: "Photoshop", image: "/photoshop.png", color: "from-blue-600 to-blue-800" },
+  { name: "EasyEDA", image: "/easyeda.png", color: "from-purple-600 to-purple-800" },
+  { name: "Miro", image: "/miro.png", color: "from-purple-600 to-purple-800" },
+  { name: "Arduino", image: "/arduino.svg", color: "from-blue-400 to-teal-500" },
+  { name: "ESP32", image: "/esp32.jpg", color: "from-gray-500 to-gray-700" },
 ]
 
 
@@ -113,16 +111,15 @@ export function SkillsSection() {
             >
               <div className="relative">
                 <div
-                  className={`
-                  w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl
-                  bg-gradient-to-br ${skill.color} p-0.5
-                  group-hover:scale-110 group-hover:rotate-6 transition-all duration-300
-                `}
+                  className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 flex items-center justify-center group-hover:scale-110 transition-all duration-300"
                 >
-                  <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                    <skill.icon className="w-8 h-8 text-current group-hover:scale-110 transition-transform duration-300" />
-                  </div>
-
+                  <Image
+                    src={skill.image}
+                    alt={skill.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
                 <h3 className="font-semibold text-xs sm:text-sm group-hover:text-primary transition-colors duration-300">

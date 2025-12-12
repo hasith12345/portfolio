@@ -101,13 +101,13 @@ export function HeroSection() {
             {mounted && (
               <>
                 <div className="absolute -top-4 -left-4 w-10 h-10 sm:w-12 sm:h-12 bg-card border border-border rounded-xl flex items-center justify-center shadow-lg animate-float">
-                  <span className="text-base sm:text-lg">⚡</span>
+                  <span className="text-base sm:text-lg">💻</span>
                 </div>
                 <div className="absolute top-6 sm:top-8 -right-6 sm:-right-8 w-8 h-8 sm:w-10 sm:h-10 bg-card border border-border rounded-lg flex items-center justify-center shadow-lg animate-float-delayed">
-                  <span className="text-xs sm:text-sm">🚀</span>
+                  <span className="text-xs sm:text-sm">⁴⁰⁴</span>
                 </div>
                 <div className="absolute -bottom-2 left-6 sm:left-8 w-6 h-6 sm:w-8 sm:h-8 bg-card border border-border rounded-lg flex items-center justify-center shadow-lg animate-float-slow">
-                  <span className="text-xs">✨</span>
+                  <span className="text-xs">#</span>
                 </div>
               </>
             )}

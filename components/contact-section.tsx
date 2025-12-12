@@ -97,7 +97,7 @@ export function ContactSection() {
               <h3 className="text-3xl font-bold mb-4">Let's start a conversation</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 I'm always excited to work on new projects and collaborate with amazing people. Drop me a message and
-                let's create something extraordinary! 🚀
+                let's create something extraordinary!
               </p>
             </div>
 
