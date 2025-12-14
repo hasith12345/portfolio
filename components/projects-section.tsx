@@ -14,7 +14,7 @@ const techIcons: { [key: string]: string } = {
   "Tailwind CSS": "/tailwind.png",
   "Git": "/git.png",
   "Figma": "/figma.png",
-  "Django": "/Django.png",
+  "Django": "/django.png",
   "PostgreSQL": "/postgresql.svg",
   "Docker": "/docker.png",
   "Next.js": "/next.webp",
