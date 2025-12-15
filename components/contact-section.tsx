@@ -84,7 +84,7 @@ export function ContactSection() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">Get In Touch</h2>
+          <h2 className="text-5xl md:text-4xl font-bold mb-6 text-foreground">Get In Touch</h2>
           <p className="text-muted-foreground text-xl max-w-2xl mx-auto leading-relaxed">
             Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
           </p>

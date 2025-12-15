@@ -37,12 +37,12 @@ export function HeroSection() {
           <div className="space-y-6">
             <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance leading-tight animate-fade-in-up">Hey there, I'm</h2>
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-balance leading-tight animate-fade-in-up">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance leading-tight animate-fade-in-up">
                 <span className="text-primary font-bold ">Hasith Gamlath</span>
               </h1>
             </div>
             <p
-              className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed font-light animate-fade-in-up"
+              className="text-lg sm:text-xl lg:text-1xl text-muted-foreground leading-relaxed font-light animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
               Passionate <span className="text-foreground font-medium">IT student</span> and <span className="text-foreground text-primary font-medium">Full-Stack Developer</span> exploring modern web technologies to create 
