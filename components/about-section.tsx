@@ -9,19 +9,21 @@ export function AboutSection() {
             <h2 className="text-4xl font-bold text-balance">Curious about me? Here you have it:</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Motivated IT enthusiast with a strong foundation in web development, programming, 
-                and software solutions. Experienced in building responsive and interactive web 
-                applications using modern technologies like React, Node.js, Express, and MongoDB.
+                I’m a motivated and self-driven individual who is continuously learning new 
+                technologies and improving my technical skills. I’m currently a third-year 
+                undergraduate at the University of Moratuwa, pursuing a BSc in Information 
+                Technology and Management, with a strong focus on full-stack web development.
               </p>
               <p>
-                Passionate about exploring emerging technologies, solving real-world problems, 
-                and turning innovative ideas into practical projects. Dedicated to creating 
-                user-friendly digital experiences while maintaining clean, efficient, and scalable code.
+                I’m particularly interested in building complete, responsive web applications 
+                and enjoy working across both frontend and backend development. I have hands-on 
+                experience through academic and personal projects using modern technologies such 
+                as React, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Git, and Postman.
               </p>
               <p>
-                Skilled in problem-solving, creative thinking, attention to detail, and collaboration,
-                with a strong drive to learn continuously and contribute effectively in team-oriented 
-                environments.
+                I’m passionate about turning ideas into practical software solutions, writing 
+                clean and maintainable code, and continuously improving as a developer while 
+                contributing effectively to team-based projects.
               </p>
             </div>
           </div>
