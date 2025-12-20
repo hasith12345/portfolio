@@ -86,12 +86,12 @@ export function HeroSection() {
 
         <div className="flex justify-center lg:justify-end animate-fade-in-right">
           <div className="relative group">
-            <div className="absolute -inset-2 bg-primary/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity animate-pulse" />
-            <div className="absolute -inset-2 bg-primary/30 rounded-2xl blur-lg opacity-50" />
+            <div className="absolute -inset-2 bg-primary/20 rounded-full blur-xl opacity-50 group-hover:opacity-100 transition-opacity animate-pulse" />
+            <div className="absolute -inset-2 bg-primary/30 rounded-full blur-lg opacity-50" />
 
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-2 border-primary shadow-1xl shadow-primary/30">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-primary shadow-1xl shadow-primary/30">
               <img
-                src="/cv profile.jpg"
+                src="/edited1.jpg"
                 alt="Professional headshot"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -100,13 +100,13 @@ export function HeroSection() {
 
             {mounted && (
               <>
-                <div className="absolute -top-4 -left-4 w-10 h-10 sm:w-12 sm:h-12 bg-card border border-border rounded-xl flex items-center justify-center shadow-lg animate-float">
+                <div className="absolute top-[15%] left-[15%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-card border border-border rounded-full flex items-center justify-center shadow-lg animate-float">
                   <span className="text-base sm:text-lg">💻</span>
                 </div>
-                <div className="absolute top-6 sm:top-8 -right-6 sm:-right-8 w-8 h-8 sm:w-10 sm:h-10 bg-card border border-border rounded-lg flex items-center justify-center shadow-lg animate-float-delayed">
+                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-card border border-border rounded-full flex items-center justify-center shadow-lg animate-float-delayed">
                   <span className="text-xs sm:text-sm">⁴⁰⁴</span>
                 </div>
-                <div className="absolute -bottom-2 left-6 sm:left-8 w-6 h-6 sm:w-8 sm:h-8 bg-card border border-border rounded-lg flex items-center justify-center shadow-lg animate-float-slow">
+                <div className="absolute bottom-0 left-1/4 translate-y-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-card border border-border rounded-full flex items-center justify-center shadow-lg animate-float-slow">
                   <span className="text-xs">#</span>
                 </div>
               </>
