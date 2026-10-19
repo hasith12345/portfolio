@@ -10,15 +10,17 @@ export function AboutSection() {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 I’m a motivated and self-driven individual who is continuously learning new 
-                technologies and improving my technical skills. I’m currently a third-year 
-                undergraduate at the University of Moratuwa, pursuing a BSc in Information 
-                Technology and Management, with a strong focus on full-stack web development.
+                technologies and improving my technical skills. I’m currently a fourth-year
+                undergraduate at the University of Moratuwa, pursuing a BSc (Hons) in Information
+                Technology and Management, with eight months of industry experience as a Software
+                Engineering Intern at Panaceata (Pvt) Ltd.
               </p>
               <p>
-                I’m particularly interested in building complete, responsive web applications 
-                and enjoy working across both frontend and backend development. I have hands-on 
-                experience through academic and personal projects using modern technologies such 
-                as React, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Git, and Postman.
+                During my internship, I contributed to seven client projects across AI, healthcare,
+                agriculture, education, and enterprise domains, working remotely in an Agile team.
+                I build full-stack web and mobile applications, AWS cloud-native backends, and AI
+                solutions using LLMs, RAG, and voice agents, with technologies such as React,
+                Next.js, Angular, React Native, Node.js, NestJS, and AWS.
               </p>
               <p>
                 I’m passionate about turning ideas into practical software solutions, writing 

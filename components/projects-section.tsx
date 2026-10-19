@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 
 // Technology icon mapping
-const techIcons: { [key: string]: string } = {
+export const techIcons: { [key: string]: string } = {
   "React": "/React.png",
   "Express.js": "/express.png",
   "Node.js": "/node.png",
@@ -35,9 +35,55 @@ const techIcons: { [key: string]: string } = {
   "Shadcn": "/shadcn.png",
   "Resend(Email Service)": "/resend.png",
   "JWT Auth": "/jwt.svg",
+  "React Native": "/React.png",
+  "Angular": "/skills/angular.svg",
+  "NestJS": "/skills/nestjs.svg",
+  "AWS": "/skills/aws.svg",
+  "Amazon Bedrock": "/skills/bedrock.svg",
+  "RAG": "/skills/rag.svg",
+  "LiveKit": "/skills/livekit.svg",
+  "Twilio": "/skills/twilio.svg",
+  "Stripe": "/skills/stripe.svg",
+  "DynamoDB": "/skills/dynamodb.svg",
+  "Jest": "/skills/jest.svg",
+  "Playwright": "/skills/playwright.svg",
+  "Azure DevOps": "/skills/azure-devops.svg",
+  "GitHub Actions": "/skills/github-actions.svg",
+  "Supabase": "/skills/supabase.svg",
+  "Auth0": "/skills/auth0.svg",
+  "WebSockets": "/skills/websockets.svg",
+  "Socket.io": "/skills/websockets.svg",
+  "Cloudinary": "/skills/cloudinary.svg",
+  "Render": "/skills/render.svg",
+  "Firebase": "/skills/firebase.svg",
+  "Laravel 11": "/skills/laravel.svg",
+  "PHP": "/skills/php.svg",
 }
 
 const projects = [
+  {
+    title: "TutorLink - Smart Student-Tutor Connect Platform",
+    role: "Full-Stack Developer – 3rd Year Individual Project",
+    description:
+      "A centralized platform that connects students with tutors, streamlining tutor discovery, course enrollment, and learning management in one place.",
+    image: "/project10.png",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Supabase",
+      "Auth0",
+      "WebSockets",
+      "Stripe",
+      "Cloudinary",
+      "Vercel",
+      "Render",
+    ],
+    demo: "https://tutorlink-web.vercel.app/",
+    code: "https://github.com/hasith12345/tutorlink-web",
+    backendCode: "https://github.com/hasith12345/tutorlink-api",
+  },
   {
     title: "SalonMe | Salon Management Platform",
     role: "Full-Stack Developer – 2nd Year Group Project",
@@ -203,7 +249,7 @@ export function ProjectsSection() {
                 </div>
 
                 {/* Project Link */}
-                <div className="flex items-center gap-6">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
                   {project.demo !== "#" && (
                     <a
                       href={project.demo}
@@ -219,7 +265,16 @@ export function ProjectsSection() {
                       className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
                     >
                       <Github className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                      <span className="font-medium">View Code</span>
+                      <span className="font-medium">{project.backendCode ? "Frontend Code" : "View Code"}</span>
+                    </a>
+                  )}
+                  {project.backendCode && (
+                    <a
+                      href={project.backendCode}
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
+                    >
+                      <Github className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      <span className="font-medium">Backend Code</span>
                     </a>
                   )}
                 </div>

@@ -10,7 +10,7 @@ export function Footer() {
           {/* Left side - Name and tagline */}
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold text-foreground">Hasith Gamlath</h3>
-            <p className="text-sm text-muted-foreground">Full Stack Developer & IT Student</p>
+            <p className="text-sm text-muted-foreground">Full Stack Developer & IT Undergraduate</p>
           </div>
 
           {/* Center - Social links */}
