@@ -52,7 +52,7 @@ export function HeroSection() {
 
           <div className="flex animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <a
-              href="https://drive.google.com/file/d/162CfZVaX_BlsfHzbL13IijFPGkzpE_XK/view?usp=sharing"
+              href="https://drive.google.com/file/d/1tZU_e5LdIVtgxOPkv-jC6CgOF9pIATie/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-6 py-3 group hover-lift transition-all duration-300"
