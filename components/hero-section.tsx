@@ -45,8 +45,8 @@ export function HeroSection() {
               className="text-lg sm:text-xl lg:text-1xl text-muted-foreground leading-relaxed font-light animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Passionate <span className="text-foreground font-medium">IT student</span> and <span className="text-foreground text-primary font-medium">Full-Stack Developer</span> exploring modern web technologies to create 
-               innovative and user-friendly digital solutions.
+              <span className="text-foreground font-medium">4th-year IT undergraduate</span> and <span className="text-foreground text-primary font-medium">Full-Stack Developer</span> with
+               eight months of industry experience building web, mobile, cloud, and AI applications.
             </p>
           </div>
 
@@ -91,8 +91,8 @@ export function HeroSection() {
 
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-primary shadow-1xl shadow-primary/30">
               <img
-                src="/edited1.jpg"
-                alt="Professional headshot"
+                src="/profile.jpg"
+                alt="Hasith Gamlath"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               
@@ -100,9 +100,6 @@ export function HeroSection() {
 
             {mounted && (
               <>
-                <div className="absolute top-[15%] left-[15%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-card border border-border rounded-full flex items-center justify-center shadow-lg animate-float">
-                  <span className="text-base sm:text-lg">💻</span>
-                </div>
                 <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-card border border-border rounded-full flex items-center justify-center shadow-lg animate-float-delayed">
                   <span className="text-xs sm:text-sm">⁴⁰⁴</span>
                 </div>

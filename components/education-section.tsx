@@ -7,8 +7,8 @@ const education = [
     period: "2023 - Present",
     location: "Katubedda, Sri Lanka",
     description:
-      "3rd Year Undergraduate specializing in Information Technology & Management with a strong interest in software engineering, web development, and data-driven solutions.",
-    gpa: "3.4/4.0 Upto 2nd Year",
+      "4th Year Undergraduate specializing in Information Technology & Management with a strong interest in software engineering, web development, and data-driven solutions.",
+    gpa: "3.4/4.0 Upto 3rd Year",
     icon: "🎓",
   },
   {
