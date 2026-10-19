@@ -59,7 +59,7 @@ export function HeroSection() {
               title="Download Resume"
             >
               <Download className="h-6 w-6 sm:h-7 sm:w-7 group-hover:animate-bounce" />
-              <span className="text-lg sm:text-xl font-medium text-foreground">Download CV</span>
+              <span className="text-lg sm:text-xl font-medium text-foreground">Download Resume</span>
             </a>
           </div>
 
