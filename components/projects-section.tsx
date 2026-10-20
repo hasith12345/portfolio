@@ -164,27 +164,27 @@ const projects = [
     demo: "https://www.linkedin.com/in/hasith-gamlath-18b957274/details/projects/#:~:text=4-,Line%20Following%20Car%20(NDT%20Dextron%202024%20%2D%20Line%20Following%20Car%20Competition),-Line%20Following%20Car",
     code: "#"
   },
-  {
-    title: "Medical Appointment Booking System",
-    role: "Full-Stack Developer – Personal Project",
-    description:
-      "A secure medical appointment system enabling patients to book online and administrators to manage doctors and schedules effectively, with features like user authentication, doctor management, and a responsive admin dashboard.",
-    image: "/project6.png",
-    technologies: ["Laravel 11","PHP", "MySQL", "Blade", "HTML", "CSS", "JavaScript"],
-    demo: "#",
-    code: "https://github.com/hasith12345/medical-appointment-booking-system"
-  },
-  {
-    title: "GitHub Repository Dashboard",
-    role: "Full-Stack Developer – Personal Project",
-    description:
-      "A GitHub Statistics Dashboard displaying real-time data like stars, forks, and contributors via the GitHub API. Built with a Ballerina backend, providing an interactive interface for exploring repository insights.",
-    image: "/project7.png",
-    technologies: ["Ballerina", "GitHub API", "HTML", "CSS", "JavaScript"],
-    demo: "#",
-    code: "https://github.com/hasith12345/github-statistic-dashboard"
-  },
-  
+  // {
+  //   title: "Medical Appointment Booking System",
+  //   role: "Full-Stack Developer – Personal Project",
+  //   description:
+  //     "A secure medical appointment system enabling patients to book online and administrators to manage doctors and schedules effectively, with features like user authentication, doctor management, and a responsive admin dashboard.",
+  //   image: "/project6.png",
+  //   technologies: ["Laravel 11","PHP", "MySQL", "Blade", "HTML", "CSS", "JavaScript"],
+  //   demo: "#",
+  //   code: "https://github.com/hasith12345/medical-appointment-booking-system"
+  // },
+  // {
+  //   title: "GitHub Repository Dashboard",
+  //   role: "Full-Stack Developer – Personal Project",
+  //   description:
+  //     "A GitHub Statistics Dashboard displaying real-time data like stars, forks, and contributors via the GitHub API. Built with a Ballerina backend, providing an interactive interface for exploring repository insights.",
+  //   image: "/project7.png",
+  //   technologies: ["Ballerina", "GitHub API", "HTML", "CSS", "JavaScript"],
+  //   demo: "#",
+  //   code: "https://github.com/hasith12345/github-statistic-dashboard"
+  // },
+
 ]
 
 export function ProjectsSection() {
