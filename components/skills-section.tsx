@@ -111,7 +111,10 @@ export function SkillsSection() {
   const sectionRef = useRef<HTMLElement>(null)
 
   const filteredSkills =
-    activeCategory === "All" ? skills : skills.filter((skill) => skill.category === activeCategory)
+    activeCategory === "All"
+      ? // In "All", collapse the AWS services into the single "AWS" card
+        skills.filter((skill) => skill.category !== "AWS" || skill.name === "AWS")
+      : skills.filter((skill) => skill.category === activeCategory)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
