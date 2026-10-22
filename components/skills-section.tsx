@@ -79,6 +79,7 @@ const skills: { name: string; image: string; category: Exclude<Category, "All"> 
   { name: "GitHub", image: "/github.png", category: "Tools" },
   { name: "Jest", image: "/skills/jest.svg", category: "Tools" },
   { name: "Playwright", image: "/skills/playwright.svg", category: "Tools" },
+  { name: "Stagehand", image: "/skills/stagehand.svg", category: "Tools" },
   { name: "Postman", image: "/skills/postman.svg", category: "Tools" },
   { name: "Figma", image: "/figma.png", category: "Tools" },
   { name: "EasyEDA", image: "/easyeda.png", category: "Tools" },
